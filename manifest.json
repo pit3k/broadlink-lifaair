@@ -1,7 +1,7 @@
 {
   "domain": "broadlink",
   "name": "Broadlink",
-  "version": "1.0.0-lifaair",
+  "version": "1.0.0",
   "codeowners": ["@danielhiversen", "@felipediel", "@L-I-Am", "@eifinger"],
   "config_flow": true,
   "dhcp": [
