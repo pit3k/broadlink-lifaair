@@ -1,7 +1,6 @@
 {
   "domain": "broadlink",
   "name": "Broadlink",
-  "version": "1.0.0",
   "codeowners": [
     "@danielhiversen",
     "@felipediel",
@@ -42,10 +41,10 @@
       "macaddress": "780F77*"
     }
   ],
-  "documentation": "https://www.home-assistant.io/integrations/broadlink",
+  "documentation": "https://github.com/pit3k/broadlink-lifaair#readme",
+  "integration_type": "device",
   "iot_class": "local_polling",
-  "loggers": ["broadlink"],
-  "requirements": [
-    "broadlink @ git+https://github.com/pit3k/python-broadlink.git@master"
-  ]
+  "loggers": ["broadlink_async"],
+  "requirements": ["broadlink-async==1.4.0"],
+  "version": "1.0.0"
 }
