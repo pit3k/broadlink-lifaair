@@ -109,7 +109,6 @@ SENSOR_TYPES: tuple[SensorEntityDescription, ...] = (
         key="formaldehyde",
         translation_key="formaldehyde",
         native_unit_of_measurement=UnitOfDensity.MILLIGRAMS_PER_CUBIC_METER,
-        device_class=SensorDeviceClass.VOLATILE_ORGANIC_COMPOUNDS,
         state_class=SensorStateClass.MEASUREMENT,
     ),
     SensorEntityDescription(

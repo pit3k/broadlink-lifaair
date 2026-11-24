@@ -258,6 +258,8 @@ class BroadlinkThermostatUpdateManager(BroadlinkUpdateManager[blk.hysen]):
 class BroadlinkLIFAAIRUpdateManager(BroadlinkUpdateManager[blk.lifaair]):
     """Manages updates for LIFAair."""
 
+    SCAN_INTERVAL = timedelta(seconds=10)
+
     @override
     async def async_fetch_data(self) -> dict[str, Any]:
         """Fetch data from the device."""

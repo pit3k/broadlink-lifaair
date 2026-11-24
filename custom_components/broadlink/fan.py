@@ -74,7 +74,7 @@ class LifaAirPurifierFan(BroadlinkEntity, FanEntity):
     @override
     def _update_state(self, data: dict[str, Any]) -> None:
         """Update fan state."""
-        fan_mode = data.get("fan_mode")
+        fan_mode = data["fan_mode"]
         self._attr_available = fan_mode is not None
         if fan_mode is None:
             return
@@ -83,7 +83,7 @@ class LifaAirPurifierFan(BroadlinkEntity, FanEntity):
             self._attr_percentage = None
             return
         self._attr_preset_mode = _fan_mode_to_name(fan_mode)
-        fan_speed = data.get("fan_speed")
+        fan_speed = data["fan_speed"]
         self._attr_percentage = (
             _fan_speed_to_percentage(fan_speed) if fan_speed is not None else None
         )
